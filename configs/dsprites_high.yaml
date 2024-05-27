@@ -1,0 +1,44 @@
+seed: 0
+
+# IV_NO_OBS_CONFOUNDING
+# IV_WITH_OBS_CONFOUNDING
+# PCL
+inference_mode: IV_NO_OBS_CONFOUNDING
+
+task: dsprites
+
+algo: ctrl
+
+dataset:
+  seed: 0
+  train_size: 5000
+  test_size: 2000
+  batch_size: 64 
+  unlabeled_size: 0
+  use_high_dim_obs: True
+
+network:
+  use_image_feature: False
+  gamma: 0.2 
+
+  phi_dims: [1024, 256, 64] # x: 4096
+  mu_dims: [1024, 256, 64] # z: 2352
+  xi_dims: [] # not used
+
+  num_iter: 20 
+  eval_freq: 20 
+  lr: 1.e-4
+  prob_loss_weight: 0.1
+
+sgd:
+  num_iter: 8 
+  eval_freq: 1
+
+  batch_size: 64
+  eta: 0.005
+
+  reg_weight: 
+    lambda_v: 0.01
+    lambda_w: 0.01
+
+  

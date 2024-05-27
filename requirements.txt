@@ -1,0 +1,9 @@
+filelock==3.14.0
+matplotlib==3.8.3
+numpy==1.26.4
+pandas==2.2.2
+PyYAML==6.0.1
+scipy==1.13.1
+torch==2.1.2
+torchvision==0.16.2+cu121
+tqdm==4.66.2
